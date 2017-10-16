@@ -6,28 +6,30 @@ $(document).ready(function(){
 	function makeGrid()
 	{
 		try
-		{
+		{			
 			var c = document.getElementById("myCanvas");	
 			var ctx = c.getContext('2d');
 
-			// Create gradient
-			var grd = ctx.createLinearGradient(0,0,200,0);
-			grd.addColorStop(0,"red");
-	        grd.addColorStop(1,"white");
+			var rows = $('#gridHeight').val();
+			var columns = $('#gridWidth').val();
+            
+            var space = 10;
+            var x = 10;
+            var y = 10;
 
-	        // Fill with gradient
-	     	ctx.fillStyle = grd;
+			//row
+			for(var i=0; i<=rows; i++)
+			{
+				for(var j=0; j<=columns; j++)
+				{	
+					ctx.rect(10,10,x,y);
+					x = x +space;
+				}
 
-	     	var x = 5;
-	     	var y = 5;
-
-	     	for(var i=0; i<40; i++)
-	     	{
-	     		x = x+9;
-	     		ctx.fillRect(x,y,10,10);
-				ctx.stroke();	
-	     	}
-					
+				y = y + space;
+			}			
+			
+			ctx.stroke();
 		}
 		catch(err)
 		{

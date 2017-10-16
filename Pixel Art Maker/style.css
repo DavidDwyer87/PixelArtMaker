@@ -1,4 +1,22 @@
-.main
+.center
 {
-	margin:0;
+	margin: auto;
+	text-align: center;
+}
+
+.heading 
+{
+	font-family: Monoton, cursive;
+	font-size: 45px;
+}
+
+.color-picker
+{
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+
+.color-picker-label
+{
+	text-weight: bold;
 }

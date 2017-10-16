@@ -1,29 +1,38 @@
 <!doctype htlml>
 <html>
+
 	<head>
 		<title>Pixel Art Maker</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script type="text/javascript" src="index.js">	
+		<script type="text/javascript" src="design.js">	
 		</script>
 
 		<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 	</head>
+
 	<body>
-		<div class="main">
-			<h1 style="font-family: 'Monoton', cursive;">PIXEL ART MAKER</h1>
+		<div class="center">
+			<h1 class="heading">PIXEL ART MAKER</h1>
 			<div>
 				<label>Grid height</label>
-				<input type="textbox" id="gridHeight">
+				<input type="textbox" id="gridHeight" value="16">
 				<label>Grid Width</label>
-				<input type="textbox" id="gridWidth">
+				<input type="textbox" id="gridWidth" value="16">
 				<input type="button" id="btnSubmit" value="Submit">
 			</div>
-			<canvas id="myCanvas" width="200" height="100">
-				
-			</canvas>	
+			<div class="color-picker">
+				<label class="color-picker-label">Pick a Color</label>
+				<input type="color" id="colorPicker">
+			</div>
+
+			<div id="Canvas">
+				<h2>Design Canvas</h2>
+				<canvas id="myCanvas" width="800" height="600"></canvas>
+			</div>				
 		</div>		
 	</body>
 </html>
