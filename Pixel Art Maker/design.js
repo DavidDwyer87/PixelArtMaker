@@ -7,8 +7,11 @@ $(document).ready(function(){
 	{
 		try
 		{			
-			var c = document.getElementById("myCanvas");	
+			var c = $('#myCanvas')[0]; 
 			var ctx = c.getContext('2d');
+
+			//clear canvas before drawing new grid
+			ctx.clearRect(0,0,c.width,c.height);
 
 			var rows = $('#gridHeight').val();
 			var columns = $('#gridWidth').val();
@@ -17,20 +20,27 @@ $(document).ready(function(){
             var x = 10;
             var y = 10;
 
+            ctx.beginPath();
 			//row
 			for(var i=0; i<rows; i++)
 			{
-				for(var j=0; j<=columns; j++)
+				//column
+				for(var j=0; j<columns; j++)
 				{	
-					ctx.rect(x,y,10,10);
+					ctx.rect(x,y,10,10,'rect_'+i+'_'+j);
 					x = x +space;
 				}
+
 				x=10;
 				y = y + space;
-			}			
-			
+			}		
 			
 			ctx.stroke();
+            ctx.closePath();
+
+			$('#myCanvas').on('click',function(){
+
+			});
 		}
 		catch(err)
 		{
