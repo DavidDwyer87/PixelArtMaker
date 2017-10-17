@@ -27,7 +27,7 @@ $(document).ready(function(){
 				//column
 				for(var j=0; j<columns; j++)
 				{	
-					ctx.rect(x,y,10,10,'rect_'+i+'_'+j);
+					ctx.rect(x,y,10,10);
 					x = x +space;
 				}
 
@@ -38,9 +38,7 @@ $(document).ready(function(){
 			ctx.stroke();
             ctx.closePath();
 
-			$('#myCanvas').on('click',function(){
-
-			});
+            
 		}
 		catch(err)
 		{
