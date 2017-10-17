@@ -18,16 +18,17 @@ $(document).ready(function(){
             var y = 10;
 
 			//row
-			for(var i=0; i<=rows; i++)
+			for(var i=0; i<rows; i++)
 			{
 				for(var j=0; j<=columns; j++)
 				{	
-					ctx.rect(10,10,x,y);
+					ctx.rect(x,y,10,10);
 					x = x +space;
 				}
-
+				x=10;
 				y = y + space;
 			}			
+			
 			
 			ctx.stroke();
 		}
