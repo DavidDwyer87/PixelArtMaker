@@ -27,7 +27,7 @@ $(document).ready(function(){
 			}
 
 			$('td').on('click',function(){
-				console.log($(this).css('background-color','red'));
+				console.log($(this).css('background-color',$('#colorPicker').val()));
 			});
 		}
 		catch(err)
