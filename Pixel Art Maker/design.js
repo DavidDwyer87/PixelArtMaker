@@ -7,38 +7,28 @@ $(document).ready(function(){
 	{
 		try
 		{			
-			var c = $('#myCanvas')[0]; 
-			var ctx = c.getContext('2d');
+			let rows = $('#gridHeight').val();
+			let columns = $('#gridWidth').val();
 
-			//clear canvas before drawing new grid
-			ctx.clearRect(0,0,c.width,c.height);
-
-			var rows = $('#gridHeight').val();
-			var columns = $('#gridWidth').val();
-            
-            var space = 10;
-            var x = 10;
-            var y = 10;
-
-            ctx.beginPath();
-			//row
-			for(var i=0; i<rows; i++)
-			{
-				//column
-				for(var j=0; j<columns; j++)
-				{	
-					ctx.rect(x,y,10,10);
-					x = x +space;
-				}
-
-				x=10;
-				y = y + space;
-			}		
+			let table = $('#canvas_table');
 			
-			ctx.stroke();
-            ctx.closePath();
+			//clear table before adding new rows and columns
+			table.empty();
 
-            
+			//rows
+			for(let i=0; i<rows; i++)
+			{
+				table.append("<tr id=r"+i+"></tr>");
+				//columns
+				for(let j=0; j<columns; j++)
+				{
+					$('#r'+i).append("<td id='c"+i+"_"+j+"'></td>");
+				}
+			}
+
+			$('tr').on('click',function(){
+				alert($(this).id);
+			});
 		}
 		catch(err)
 		{
