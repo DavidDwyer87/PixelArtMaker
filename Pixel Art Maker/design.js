@@ -26,8 +26,8 @@ $(document).ready(function(){
 				}
 			}
 
-			$('tr').on('click',function(){
-				alert($(this).id);
+			$('td').on('click',function(){
+				console.log($(this).css('background-color','red'));
 			});
 		}
 		catch(err)
