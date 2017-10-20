@@ -1,6 +1,5 @@
 ﻿<!doctype html>
 <html>
-
 	<head>
 		<title>Pixel Art Maker</title>
 		<meta charset="utf-8">
@@ -12,27 +11,29 @@
 		<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
 	</head>
-
 	<body>
 		<div class="center">
 			<h1 class="heading">PIXEL ART MAKER</h1>
-			<div>
+
+			<div id="controls">
 				<label>Grid height</label>
 				<input type="number" id="gridHeight" value="16">
 				<label>Grid Width</label>
 				<input type="number" id="gridWidth" value="16">
 				<input type="button" id="btnSubmit" value="Submit">
 			</div>
+
 			<div class="color-picker">
 				<label class="color-picker-label">Pick a Color</label>
 				<input type="color" id="colorPicker">
 			</div>
+
 			<div id="Canvas">
 				<table id="canvas_table">					
 				</table>
-			</div>		
+			</div>
 		</div>
-
+		
 		<script src="design.js">	
 		</script>		
 	</body>

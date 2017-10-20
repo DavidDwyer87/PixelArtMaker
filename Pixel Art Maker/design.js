@@ -1,6 +1,6 @@
 $('#btnSubmit').click(function(){
-		makeGrid();
-	});
+	makeGrid();
+});
 
 function makeGrid()
 {

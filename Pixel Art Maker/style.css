@@ -1,23 +1,19 @@
-.center
-{
+.center {
 	margin: auto;
 	text-align: center;
 }
 
-.heading 
-{
+.heading {
 	font-family: Monoton, cursive;
 	font-size: 45px;
 }
 
-.color-picker
-{
+.color-picker {
 	padding-top: 10px;
 	padding-bottom: 15px;
 }
 
-.color-picker-label
-{
+.color-picker-label {
 	text-weight: bold;
 }
 
